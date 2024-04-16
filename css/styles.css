@@ -31,6 +31,15 @@ body {
   background-image: url(../assets/images/mobile/image-header.jpg);
   background-size: cover;
 }
+@media screen and (min-width: 768px) {
+  .header {
+    width: 1440px;
+    height: 800px;
+    padding-top: 32px;
+    background-image: url(../assets/images/desktop/image-header.jpg);
+    background-size: cover;
+  }
+}
 
 .logo-menu-container {
   margin-left: 24px;
@@ -38,6 +47,20 @@ body {
   margin-bottom: 88px;
   display: flex;
   justify-content: space-between;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-image {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .logo-image {
+    width: 170px;
+    height: 33px;
+    position: absolute;
+    margin-left: 40px;
+    margin-top: 34px;
+  }
 }
 .web-title {
   position: relative;
@@ -47,32 +70,140 @@ body {
   text-align: center;
   letter-spacing: 0.3906rem;
 }
+@media screen and (min-width: 768px) {
+  .web-title {
+    font-size: 56px;
+    margin-top: 195px;
+  }
+}
+
 .arrow {
   position: absolute;
   left: 173px;
   top: 294px;
 }
+@media screen and (min-width: 768px) {
+  .arrow {
+    position: absolute;
+    left: 705px;
+    top: 360.54px;
+  }
+}
 .main {
   width: 375px;
+}
+@media screen and (min-width: 768px) {
+  .main {
+    width: 1440px;
+  }
 }
 .egg-image {
   width: 375px;
   height: 312px;
 }
 
-.menu {
-  opacity: 0;
-  visibility: hidden;
+.transform-egg {
+  display: flex;
+  flex-direction: column;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+  align-items: center;
+  width: 375px;
+  height: 437px;
+  background-color: white;
+  color: #24303e;
+  font-family: "Fraunces";
 }
 
-.menu {
-  position:absolute;
-  top:106px;
-  left: 23px;
+.title__card {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.text__card {
+  text-align: center;
+  font-size: 1.125rem;
+  color: #808397;
+}
+
+.learn__button {
+  position: relative;
+  font-size: 15px;
+  font-weight: 700;
+  z-index: 0;
+}
+.learn__button::after {
+  content: "";
+  position: absolute;
+  right: -6px;
+  top: 10px;
+  width: 100px;
+  height: 12px;
+  background-color: rgba(250, 212, 0, 0.2);
+  border-radius: 28px;
+  z-index: -1;
+}
+.learn__button--pink::after {
+  content: "";
+  position: absolute;
+  right: -6px;
+  top: 10px;
+  width: 100px;
+  height: 12px;
+  background-color: rgba(254, 120, 102, 0.2);
+  border-radius: 28px;
+  z-index: -1;
+}
+.audience-cup {
   display: flex;
+  flex-direction: column;
+}
+.cup-image {
+  width: 375px;
+  height: 312px;
+}
+@media screen and (min-width: 768px) {
+  .transform-egg {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1440px;
+  }
+  .egg-image {
+    width: 720px;
+    height: 700px;
+    order: 1;
+  }
+  .card {
+    height: 600px;
+    justify-content: center;
+    align-items: start;
+    align-content: center;
+    padding: 158px 110px 158px 167px;
+    width: 720px;
+  }
+  .title__card {
+    font-size: 2.5rem;
+  }
+  .text__card {
+    font-size: 1.125rem;
+    text-align: left;
+  }
+  .audience-cup {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.menu {
+  position: absolute;
+  top: 106px;
+  left: 23px;
+  display: none;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
   width: 329px;
   height: 329px;
   font-family: "Barlow", sans-serif;
@@ -81,30 +212,63 @@ body {
   color: #808397;
   background-color: rgb(255, 255, 255);
   flex-direction: column;
+  z-index: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    left: 0;
+    top: 0;
+    align-items: center;
+    width: 1440px;
+    height: auto;
+    background-color: transparent;
+    color: white;
+    gap: 2.9375rem;
+    padding: 34px 48px;
+  }
+  .menu::after {
+    visibility: hidden;
+  }
 }
 
 .show {
-  opacity: 1;
-  visibility:visible;
+  display: flex;
 }
 .menu::after {
-  content:"";
-  position:absolute;
-  top:-24px;
+  content: "";
+  position: absolute;
+  top: -24px;
   right: 0;
   width: 24px;
   height: 24px;
   background-image: linear-gradient(130deg, transparent 50%, white 50%);
 }
 .yellow-button {
-  color: #24303E;
-  background-color: #FBD600;
+  color: #24303e;
+  background-color: #fbd600;
   border-radius: 28px;
   text-align: center;
   padding: 16px 32px;
 }
 
-.menu-item {
-  padding-top: 32px;
+.menu__item--space {
+  margin-top: 24px;
 }
 
+@media screen and (min-width: 768px) {
+  .yellow-button {
+    background-color: white;
+  }
+
+  .menu__item--space {
+    margin-top: 0;
+  }
+}
+
+.menu__item {
+  padding-top: 32px;
+}

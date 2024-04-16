@@ -25,7 +25,7 @@
         </div>
 
         <nav class="nav">
-            <ul id="menu" class="menu show">
+            <ul id="menu" class="menu">
                 <li class="menu__item">
                     <a href="#" class="menu__link">About</a>
                 <li class="menu__item">
@@ -34,7 +34,7 @@
                 <li class="menu__item">
                     <a href="#" class="menu__link">Projects</a>
                 </li>
-                <li class="menu__item">
+                <li class="menu__item menu__item--space">
                     <a class="yellow-button" href="#" class="menu__link">Contact </a>
                 </li>
             </ul>
@@ -48,8 +48,53 @@
     </header>
 
     <main class="main">
-        <img class="egg-image" src="./assets/images/mobile/image-transform.jpg" alt="egg-image">
+        <article>
+            <div class="transform-egg">
 
+
+                <picture class="egg-image">
+                    <source media="min-width: 768px" srcset="./assets/images/desktop/image-transform.jpg">
+                    <source media="min-width: 360px" srcset="./assets/images/mobile/image-transform.jpg">
+                    <img class="egg-image" src="./assets/images/mobile/image-transform.jpg" alt="egg-image">
+                </picture>
+    
+               
+                <div class="card">
+                    <h1 class="title__card title__card--black">Transform your brand</h1>
+                    <p class="text__card text__card--black"> We are a full-service creative agency specializing in helping brands grow fast. Engage your clients through compelling visuals that do most of the marketing for you.</p>
+                    <a class="learn__button" href="#">Learn More</a>
+    
+                </div>
+    
+    
+            </div>
+
+        </article>
+
+        <article>
+            <div class="audicente-cup">
+
+
+                <picture class="cup-image">
+                    <source media="min-width: 768px" srcset="./assets/images/mobile/image-stand-out.jpg">
+                    <source media="min-width: 360px" srcset="./assets/images/desktop/image-stand-out.jpg">
+                    <img class="egg-image" src="./assets/images/mobile/image-stand-out.jpg" alt="egg-image">
+                </picture>
+    
+               
+                <div class="card">
+                    <h1 class="title__card title__card--black">Stand out to the right audience</h1>
+                    <p class="text__card text__card--black">Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places. </p>
+                    <a class="learn__button learn__button--pink" href="#">Learn More</a>
+    
+                </div>
+    
+    
+            </div>
+
+        </article>
+        
+        
         
 
     </main>
