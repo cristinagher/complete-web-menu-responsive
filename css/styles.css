@@ -192,13 +192,11 @@ body {
   .audience-cup {
     display: flex;
     flex-direction: row;
-  
   }
   .cup-image {
     width: 720px;
     height: 700px;
     order: 0;
-    
   }
 }
 .menu {
@@ -279,9 +277,9 @@ body {
 
 .cherry-orange {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
 }
-.cherry-card{
+.cherry-card {
   width: 23.4375rem;
   height: 37.5rem;
   background-image: url(../assets/images/mobile/image-graphic-design.jpg);
@@ -293,17 +291,34 @@ body {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
-
+@media screen and (min-width: 768px) {
+  .cherry-card {
+    width: 720px;
+    height: 600px;
+    padding-bottom: 3.6875rem;
+    padding-left: 191px;
+    padding-right: 191px;
+    background-image: url(../assets/images/desktop/image-graphic-design.jpg);
+    background-size: cover;
+  }
+  .orange-card {
+    width: 720px;
+    height: 600px;
+  }
+}
 
 .title__card--small {
   font-size: 1.75rem;
 }
-.title__card--green{
-  color: #24554A;
+.title__card--green {
+  color: #24554a;
 }
 .text__card--small {
   font-size: 1rem;
-  color:#24554A;
+  color: #24554a;
+  text-align: center;
+  font-family: "Barlow";
+  font-weight: 500;
 }
 
 .orange-card {
@@ -319,76 +334,110 @@ body {
   padding-right: 1.5rem;
 }
 
-.title__card--blue{
-  color: #052C3B
+@media screen and (min-width: 728px) {
+  .orange-card {
+    width: 720px;
+    height: 600px;
+    padding-bottom: 3.6875rem;
+    padding-left: 191px;
+    padding-right: 191px;
+    background-image: url(../assets/images/desktop/image-photography.jpg);
+    background-size: cover;
+  }
+}
+
+.title__card--blue {
+  color: #052c3b;
 }
 
 .text__card--blue {
-  color: #19536C
+  color: #19536c;
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
   .cherry-orange {
     flex-direction: row;
   }
-  
 }
+
 .avatar-title {
   font-size: 1rem;
-  color: #A7AAAD;
+  color: #a7aaad;
   text-align: center;
+  letter-spacing: 0.25rem;
+  padding: 64px 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .avatar-title {
+    margin-top: 160px;
+  }
 }
 .avatar-container {
-  display:flex;
-  flex-direction:column;
-  align-items: center;
-  gap:64px;
-  background-color: white;
-}
-.name-container {
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  gap:0.5625rem;
+  gap: 64px;
+  background-color: white;
+  margin-bottom: 86px;
+}
+
+@media screen and (min-width: 768px) {
+  .avatar-container {
+    flex-direction: row;
+    padding: 160px 165px;
+    padding-top: 81px;
+    width: 1110px;
+    gap: 30px;
+  }
+}
+.name-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5625rem;
 }
 .avatar {
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap:2rem;
-  
+  gap: 2rem;
 }
 
 .avatar-image {
   width: 4.5rem;
   height: 4.5rem;
-  border-radius: 50%;;
+  border-radius: 50%;
 }
 
 .avatar__text {
-  color:#5B636D;
+  width: 327px;
+  color: #5b636d;
   font-weight: 500;
   text-align: center;
+  font-family: "Barlow";
+}
+@media screen and (min-width: 768px) {
+  .avatar__text {
+    width: 350px;
+  }
 }
 
 .avatar__name {
   font-size: 1.125rem;
-  color: #24303E;
+  color: #24303e;
   font-weight: 700;
-
 }
 
 .avatar__rol {
   font-size: 0.875rem;
-  color: #A7AAAD;
+  color: #a7aaad;
   font-weight: 500;
-
 }
 
 .images-container {
-  display:flex;
+  display: flex;
   flex-wrap: wrap;
-
 }
 
 .image-small {
@@ -400,4 +449,55 @@ body {
     width: 360px;
     height: 447px;
   }
+}
+
+.footer {
+  background-color: #90d4c6;
+  width: 375px;
+  display: flex;
+  flex-direction: column;
+}
+.footer-container {
+  width: 375px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: cener;
+  gap: 40px;
+  margin-top: 24px;
+}
+
+.footer-text {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Barlow";
+  color: #458d7e;
+}
+.text-container {
+  display: flex;
+  gap: 57px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-logo {
+  filter: brightness(0) saturate(100%) invert(32%) sepia(89%) saturate(292%)
+    hue-rotate(118deg) brightness(100%) contrast(87%);
+  width: 170px;
+  height: 33px;
+}
+
+.text-icon-container {
+  display: flex;
+  flex-direction: column;
+  gap: 88px;
+  margin-top: 40px;
 }
