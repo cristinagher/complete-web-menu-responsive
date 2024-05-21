@@ -456,6 +456,8 @@ body {
   width: 375px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .footer-container {
   width: 375px;
@@ -493,6 +495,7 @@ body {
     hue-rotate(118deg) brightness(100%) contrast(87%);
   width: 170px;
   height: 33px;
+  text-align: center;
 }
 
 .text-icon-container {
