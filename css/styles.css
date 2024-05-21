@@ -264,6 +264,7 @@ body {
 @media screen and (min-width: 768px) {
   .yellow-button {
     background-color: white;
+    color:24303E
   }
 
   .menu__item--space {
@@ -465,7 +466,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: cener;
+  align-items: center;
   gap: 40px;
   margin-top: 24px;
 }
@@ -504,3 +505,33 @@ body {
   gap: 88px;
   margin-top: 40px;
 }
+
+@media screen and (min-width: 768px) {
+  .footer {
+    width: 1440px;
+    
+  }
+  .footer-container {
+    width: 1440px;
+  }
+}
+
+@media (hover: hover) {
+  .icon-button:hover {
+    filter: brightness(0) saturate(100%) invert(98%) sepia(2%) saturate(7%) hue-rotate(35deg) brightness(103%) contrast(101%);
+  }
+  .footer-text:hover{
+    filter: brightness(0) saturate(100%) invert(98%) sepia(2%) saturate(7%) hue-rotate(35deg) brightness(103%) contrast(101%);
+  }
+  .yellow-button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    color: white;
+  }
+
+  .learn__button--pink::after:hover {
+    background-color: #FE7766
+  }
+  .learn__button::after:hover{
+    background-color: #FAD400;
+  }
+  }
